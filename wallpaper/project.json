@@ -1,0 +1,58 @@
+{
+  "file": "index.html",
+  "preview": "preview.jpg",
+  "title": "Dijital Gösterge Paneli",
+  "description": "Araç gösterge paneli tarzında masaüstü: saat ve saniye kadranları, Wi-Fi yakıt göstergesi, CPU hararet göstergesi, sisteme bağlı uyarı ışıkları.",
+  "type": "web",
+  "tags": [
+    "Technology"
+  ],
+  "general": {
+    "supportsaudioprocessing": false,
+    "properties": {
+      "schemecolor": {
+        "order": 0,
+        "text": "ui_browse_properties_scheme_color",
+        "type": "color",
+        "value": "1 0.18 0.24"
+      },
+      "accent": {
+        "order": 2,
+        "text": "Vurgu rengi (ibre ve ışıklar)",
+        "type": "color",
+        "value": "1 0.18 0.24"
+      },
+      "city": {
+        "order": 3,
+        "text": "Hava durumu şehri",
+        "type": "textinput",
+        "value": "İstanbul"
+      },
+      "pageseconds": {
+        "order": 4,
+        "text": "Orta ekran sayfa süresi (sn)",
+        "type": "slider",
+        "min": 3,
+        "max": 30,
+        "value": 7,
+        "editable": true
+      },
+      "mode": {
+        "order": 1,
+        "text": "Gösterge modu",
+        "type": "combo",
+        "value": 0,
+        "options": [
+          {
+            "label": "Klasik Kadran",
+            "value": 0
+          },
+          {
+            "label": "Spor Kadran",
+            "value": 1
+          }
+        ]
+      }
+    }
+  }
+}

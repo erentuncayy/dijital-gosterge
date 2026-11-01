@@ -1,0 +1,74 @@
+DİJİTAL GÖSTERGE PANELİ — KURULUM
+==================================
+
+1) DUVAR KAĞIDINI EKLE
+   - Bu klasörü kalıcı bir yere çıkar (ör. Belgeler\Gosterge).
+   - Wallpaper Engine'i aç > sol alttaki "Duvar Kağıdı Aç" (Open Wallpaper)
+     > "Dosyadan aç" (Open from File) > wallpaper\index.html dosyasını seç.
+   - Sağ panelden vurgu rengini, hava durumu şehrini ve orta ekranın
+     sayfa değiştirme süresini ayarlayabilirsin.
+
+2) SİSTEM VERİSİ İÇİN YARDIMCIYI ÇALIŞTIR (önemli)
+   Wallpaper Engine; Wi-Fi, CPU ve sıcaklık verisini duvar kağıdına
+   kendisi vermiyor. Bunu ana klasördeki "telemetri" klasöründeki küçük script yapıyor.
+   - telemetri\Baslangica-Ekle.bat dosyasına çift tıkla.
+     Bu hem şimdi başlatır hem de bilgisayar her açıldığında otomatik çalıştırır.
+   - Yönetici izni gerekmez. Arka planda penceresiz çalışır.
+   - Çalışmıyorsa orta ekranın sağ üstünde "TELEMETRİ YOK" yazar ve
+     anahtar (servis) ışığı yanar.
+
+3) CPU SICAKLIĞI (hararet göstergesi)
+   Windows çoğu bilgisayarda CPU sıcaklığını doğrudan vermez. En sağlam yol:
+   - LibreHardwareMonitor'u indir (ücretsiz, GitHub: LibreHardwareMonitor).
+   - Aç > Options > "Remote Web Server" > "Run" işaretle.
+   - Options menüsünden "Start Minimized" ve "Run On Windows Startup"ı da aç.
+   Bu yapılmazsa hararet göstergesi "-- °C" gösterir, geri kalan her şey çalışır.
+
+MODLAR (yalnızca elle değişir)
+------
+  Klasik Kadran: iki kadran (saat / saniye) + ortada çerçeveli bilgi ekranı
+  Spor Kadran:   üstte yatay saniye barı, ortada büyük saat, altta CPU/RAM barları
+  Sol alttaki düğmeye tıklayarak veya Wallpaper Engine ayarlarından değiştir.
+
+VERİ GELMİYORSA
+---------------
+  Ekranda "VERİ YOK" yazıyor ve anahtar ışığı yanıyorsa:
+  1) telemetri\Baslat.bat dosyasını çalıştır.
+  2) telemetri\Test-Et.bat dosyasını çalıştır: tarayıcıda {"cpu":...} gibi
+     bir veri görmelisin.
+  3) Hâlâ gelmiyorsa telemetri klasöründeki telemetri-log.txt dosyasını gönder.
+
+GÖSTERGELER NE ANLAMA GELİYOR
+------------------------------
+  Sol kadran ............ Saat (0–24), ortada dijital saat
+  Sol merdiven ......... Hararet = CPU sıcaklığı (90 °C üstü kırmızı)
+  Sağ kadran ............ Saniye (50–60 kırmızı bölge), üstte CPU yükü
+  Sağ merdiven ......... Yakıt = Wi-Fi sinyal kalitesi (kabloluda tam)
+  Vites (P N D S) ....... CPU yükü: P boşta, D normal, S yüksek yük, N veri yok
+
+UYARI IŞIKLARI (soldan sağa)
+  ⬅  Sol sinyal ........ Yükleme yapılıyor (yanıp söner)
+  Kısa far (yeşil) ..... İnternet bağlı
+  Uzun far (mavi) ...... Gece modu (19:00–07:00)
+  Motor arıza (sarı) ... CPU yükü %90 üstü veya sıcaklık 85 °C üstü
+  Hararet (kırmızı) .... CPU 90 °C ve üstü
+  Yağ (kırmızı) ........ RAM %90 ve üstü dolu
+  Akü (kırmızı) ........ C: diski %90 ve üstü dolu
+  Yakıt (sarı/kırmızı) . Wi-Fi zayıf (%25 altı) / bağlantı yok
+  Ünlem (sarı) ......... Gecikme (ping) 150 ms üstü
+  Anahtar (sarı) ....... Telemetri scripti çalışmıyor
+  ➡  Sağ sinyal ........ İndirme yapılıyor (yanıp söner)
+
+Orta ekrana tıklayınca sayfa değişir:
+  Sürüş bilgisayarı (CPU/RAM/disk) → Bağlantı → Medya → Dış hava
+Kritik bir durum olursa orta ekranda büyük uyarı mesajı çıkar.
+
+MÜZİK (Spotify / YouTube Music)
+  Wallpaper Engine > Ayarlar > Genel > "Medya entegrasyonu" (Media integration)
+  açık olmalı. Şarkı çalınca:
+  - Spor modda saat yukarı kayar, ortada albüm kapağı, şarkı adı ve
+    süre çubuğu (geçen süre / kalan süre) belirir.
+  - Klasik modda orta ekran otomatik olarak Medya sayfasına geçer.
+  Not: Süre bilgisini Spotify uygulaması sorunsuz verir. YouTube Music'te
+  (tarayıcıda) kapak ve şarkı adı gelir; süre çubuğu tarayıcıya göre
+  boş kalabilir.
