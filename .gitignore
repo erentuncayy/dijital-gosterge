@@ -1,0 +1,10 @@
+# Telemetri log dosyası (kişisel ağ bilgisi içerebilir)
+telemetri/telemetri-log.txt
+
+# Paketler ve geçici dosyalar
+*.zip
+*.tmp
+Thumbs.db
+desktop.ini
+.DS_Store
+node_modules/
